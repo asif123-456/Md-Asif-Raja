@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1c465c0c26.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="user.png" alt="Profile Picture of Md Asif raja">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello, I'm Md Asif Raja, a passionate Computer Science and Engineering (CSE) student currently pursuing my BTech in Lovely Professional University.<br><br> I specialize in web development, programming, and data analysis, with a strong interest in building innovative solutions to solve real-world challenges.<br>
+
+                        One of my current projects involves developing weather prediction tools, combining my love for coding and data-driven insights. As I continue to grow in the field of technology, I am eager to learn and work on new projects that push the boundaries of creativity and functionality.<br><br>
+                        
+                        Feel free to explore my work and connect with me. Let’s collaborate to bring exciting ideas to life!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience', event)">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education', event)">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/IOS apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2016</span><br>senior developer at Infosys</li>
+                            <li><span>2017</span><br>team leader at J Morgan</li>
+                            <li><span>2018</span><br>project manager at Microsoft</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2019</span><br>complete 12th from CBSE</li>
+                            <li><span>2023</span><br>complete Btech-CSE from IIT Mandi</li>
+                            <li><span>2024</span><br>complete Mtech-CSE from IIT Roorkee</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="Home-button">
+        <a href="home.html" class="home">Home</a>
+    </div>
+    
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname, event) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    
+</body>
+</html>
